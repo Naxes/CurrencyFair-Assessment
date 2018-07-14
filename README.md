@@ -1,4 +1,4 @@
-# CurrencyFair Coding Challenge
+# CurrencyFair Coding Challenge
 
 The following document is representative of the presentation aspect of the challenge presented with respect to the process followed during the development of the UI in line with the provided mockups and assets. To reiterate on the stipulations enforced: 
 
