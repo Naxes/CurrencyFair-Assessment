@@ -1,0 +1,39 @@
+/***
+GEOTAG COMPONENT
+***/
+
+/* Geotag Container */
+.geotag {
+    width: 25%;
+    height: auto;
+    overflow: hidden;
+    margin: 5px 0 0 150px;
+    padding: 5px 20px 5px 20px;    
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 40px 0 0 40px;    
+}
+
+/* Flag */
+.geotag-flag {
+    margin-top: 8px;
+}
+
+/* Currency */
+.geotag-currency {
+    line-height: 1.5;
+}
+
+/***
+MOBILE
+***/
+
+@media(max-width: 700px) {
+    .geotag {
+        margin: 10px 0 0 50px;
+    }
+
+    .geotag-currency {
+        display: none;
+    }
+}

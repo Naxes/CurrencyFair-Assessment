@@ -1,0 +1,18 @@
+/***
+NAVBAR COMPONENT
+***/
+
+/* Navigation Bar */
+.navbar {   
+    width: 100%;
+    height: 8vh;         
+    background-color: #31313b;
+}
+
+/* CurrencyFair Logo */
+.brand {
+    width: auto;
+    height: 100%;
+    margin-left: 10vw;
+    background: url('../../img/CF_logo_RGB_NEG.svg') no-repeat;
+}

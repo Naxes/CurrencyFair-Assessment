@@ -1,0 +1,44 @@
+/***
+CARD COMPONENT
+***/
+
+/* Card Container */
+.card {
+    top: 8vh;    
+    height: auto;
+    width: auto;    
+    position: sticky;
+    overflow: hidden;       
+    border-radius: 4px;             
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+/* Card Header */
+.card-header {
+    width: 100%;        
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fbfbfb;
+}
+
+.card-section {
+    width: 100%;    
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+.card-body {
+    padding: 2px 20px 2px 20px;
+}
+
+/***
+MOBILE
+***/
+
+@media(max-width: 700px) {
+    .card-title, .card-body {
+        display: flex;
+    }    
+}

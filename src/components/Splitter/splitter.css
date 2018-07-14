@@ -1,0 +1,9 @@
+/***
+SPLITTER COMPONENT
+***/
+
+/* Horizontal Underlining Splitter */
+.splitter {
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+}

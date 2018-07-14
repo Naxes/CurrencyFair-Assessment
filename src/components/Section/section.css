@@ -1,0 +1,36 @@
+/***
+SECTION COMPONENT
+***/
+
+/* Sender Header */
+.sender-header {
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid #6dc0e6;
+    background-color: #fbfbfb;
+}
+
+/* Receiver Header */
+.receiver-header {
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+    padding: 10px 20px 10px 20px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;    
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/***
+MOBILE
+***/
+
+@media(max-width: 700px) {
+    .section>.sender-header>.grid {
+        display: flex;
+    }
+
+    .section>.receiver-header>.grid {
+        display: flex;
+    }
+}

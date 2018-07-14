@@ -1,0 +1,83 @@
+/***
+GRID SYSTEM
+***/
+
+/* Flexbox Grid */
+.grid {
+  display: flex;   
+}
+
+/* Flexbox Column (Extra Small) */
+.col-xs {
+  flex: .2;
+}
+
+/* Flexbox Column (Small) */
+.col-s {
+  flex: .5;
+}
+
+/* Flexbox Column (Medium) */
+.col-m {
+  flex: 1;
+}
+
+/***
+SPACERS
+***/
+
+/* Horizontal Spacer (Small) */
+.spacer-s {
+  margin-top: 20px;
+}
+
+/* Horizontal Spacer (Medium) */
+.spacer-m {
+  margin-top: 40px;
+}
+
+/* Horizontal Spacer (Large) */
+.spacer-l {
+  margin-top: 80px;
+}
+
+/***
+SECTIONS
+***/
+
+/* Left Section (Transaction Setup) */
+.left-section {  
+  flex-basis: 60%;
+  padding-right: 40px;                 
+}
+
+/* Right Section (Sending/Receiving Details) */
+.right-section {
+  flex-grow: 1;
+  height: 100vh; 
+  padding: 0 120px 0 40px; 
+  border-left: 1px solid #e0e0e0;  
+  background: #fbfbfb;  
+}
+
+/***
+MOBILE
+***/
+
+@media (max-width: 700px) {
+  .grid {
+    display: block;
+  }
+
+  .left-section {
+    padding: 10px;
+  }
+
+  .right-section {
+    padding: 10px;
+  }
+
+  .footer {
+    display: flex;
+  }
+}

@@ -1,0 +1,134 @@
+/***
+FONTS
+***/
+
+/* Bold */
+@font-face {
+    font-family: PostGrotesk-Bold;
+    src: url('.././fonts/PostGrotesk-Bold.woff');
+}
+
+/* Regular */
+@font-face {
+    font-family: PostGrotesk-Book;
+    src: url('.././fonts/PostGrotesk-Book.woff');
+}
+
+/* Light */
+@font-face {
+    font-family: PostGrotesk-Light;
+    src: url('.././fonts/PostGrotesk-Light.woff');
+}
+
+/* Medium */
+@font-face {
+    font-family: PostGrotesk-Medium;
+    src: url('.././fonts/PostGrotesk-Medium.woff');
+}
+
+/***
+FONT SIZES
+***/
+
+/* Small */
+.font-s {
+    font-size: 12px;
+}
+
+/* Medium */
+.font-m {
+    font-size: 14px;
+}
+
+/* Medium */
+.font-l {
+    font-size: 16px;
+}
+
+/***
+COLOR PALETTE
+
+#adadad - Grey
+#31313b - Black
+#ffd079 - Orange
+
+#e0e0e0 - Light Grey
+#6dc0e6 - Light Blue
+
+#5ba0bf - Dark Blue
+***/
+
+/* Grey */
+.grey {
+    color: #adadad;
+}
+
+/* Black */
+.black {
+    color: #31313b;
+}
+
+/* Orange */
+.orange {
+    color: #ffd079;
+}
+
+/* Light Grey */
+.light-grey {
+    color: #e0e0e0;
+}
+
+/* Light Blue */
+.light-blue {
+    color: #6dc0e6;
+}
+
+/***
+ALIGNMENTS
+***/
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+/***
+HEADERS
+***/
+
+h1, h2, h3, h4 {
+    line-height: 0;
+    font-family: PostGrotesk-Book;    
+}
+
+/***
+LINKS
+***/
+
+a {
+    color: #6dc0e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #6dc0e6;
+}
+
+/***
+BODY
+***/
+
+p {
+    line-height: 1;
+}

@@ -1,0 +1,11 @@
+[
+    {    
+        "sendPrice": 2000.00,    
+        "recipientPrice": 1717.94,
+        "sendCurrency": "EUR",
+        "recipientCurrency": "GBP",    
+        "rate": 0.86022,
+        "deliveryDate": "25th November",
+        "savings": 66.19
+    }
+]
