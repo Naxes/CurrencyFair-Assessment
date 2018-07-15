@@ -73,7 +73,6 @@ This file defines font sizes, colors, alignments, and general element preset cla
 Analysing the mockup further, I noted down the following elements as components:
 
 #### Button
-
 Represents the button contained in the left margin that should bring up a modal window.
 
 #### Card
