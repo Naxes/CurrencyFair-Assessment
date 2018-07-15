@@ -11,7 +11,7 @@ The following documents the process followed during the development of the UI in
 
 [Overview](#overview)
 [Process](#process)
-  [1. Create React App](#1-create-react-app)
+[1. Create React App](#1-create-react-app)
 
 ## Overview
 
