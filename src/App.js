@@ -22,15 +22,28 @@ import './components/Steps/steps.css';
 // Define & Export Component
 export default class App extends Component {
 
+  // State
+  constructor(props) {
+    super(props);
+    this.state = {
+      details: []
+    };
+  }
+
+  // Fetch JSON
+  componentDidMount() {
+    
+  }
+
   // Implement Render
-  render () {
+  render() {
     return (      
       <div className="container">
         <Navbar />
         <div className="grid">        
           <div className="left-section">
 
-            {/* Transaction Steps */}
+            {/* Steps Component */}
             <div className="spacer-m"></div>            
             <div className="grid">
               <div className="col-xs"></div>
@@ -39,7 +52,7 @@ export default class App extends Component {
               </div>
             </div>
 
-            {/* Transaction Overview */}
+            {/* Section Component */}
             <div className="spacer-s"></div>
             <div className="grid">
               <div className="col-xs"></div>
@@ -53,11 +66,13 @@ export default class App extends Component {
             <div className="grid">
               <div className="col-xs"></div>
               <div className="col-m">
-                <Section />
+                {this.state.details.map((details) => {                
+                  return <Section details={details}/>
+                })}
               </div>
             </div>
 
-            {/* Next Button */}
+            {/* Button Component */}
             <div className="spacer-m"></div>
             <div className="grid">
               <div className="col-xs"></div>
@@ -66,7 +81,7 @@ export default class App extends Component {
               </div>
             </div>
 
-            {/* Footer */}
+            {/* Splitter Component */}
             <div className="spacer-l"></div>
             <div className="grid">
               <div className="col-xs"></div>
@@ -75,6 +90,7 @@ export default class App extends Component {
               </div>
             </div>
 
+            {/* Footer */}
             <div className="grid">
               <div className="col-xs"></div>
               <div className="col-m">
@@ -100,9 +116,13 @@ export default class App extends Component {
               </div>
             </div>                                
           </div>
+
+          {/* Card Component */}
           <div className="right-section">
             <div className="spacer-m"></div>
-            <Card />
+            {this.state.details.map((details) => {
+              <Card details={details} />
+            })}
           </div>
         </div>
       </div>

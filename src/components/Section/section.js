@@ -16,13 +16,20 @@ export default class Section extends Component {
 
     // Implement Render
     render () {
+
+        // Props for Section Component
+        const [sendInteger, sendFractional] = this.props.details.sendPrice.toFixed(2).split(".");
+        const [recipientInteger, recipientFractional] = this.props.details.recipientPrice.toFixed(2).split(".");
+
         return (
             <div className="section">
+
+                {/* Sender Section */}
                 <div className="sender-header">
                     <div className="grid">
                         <div className="col-s">
                             <p className="font-m light-blue">YOU SEND</p>
-                            <h2>€ 2,000<span className="font-l">.00</span></h2>
+                            <h2>€ {sendInteger}<span className="font-l">.{sendFractional}</span></h2>
                         </div>
 
                         <div className="col-s">
@@ -31,11 +38,12 @@ export default class Section extends Component {
                     </div>
                 </div>
 
+                {/* Receiver Section */}
                 <div className="receiver-header">
                     <div className="grid">
                         <div className="col-s">
                             <p className="font-m grey">RECEIVER GETS</p>
-                            <h2>£ 1,717<span className="font-l">.94</span></h2>
+                            <h2>£ { recipientInteger }<span className="font-l">.{recipientFractional}</span></h2>
                         </div>
 
                         <div className="col-s">

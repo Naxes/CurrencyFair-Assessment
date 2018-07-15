@@ -1,6 +1,6 @@
 # CurrencyFair Coding Challenge
 
-The following document is representative of the presentation aspect of the challenge presented with respect to the process followed during the development of the UI in line with the provided mockups and assets. To reiterate on the stipulations enforced: 
+The following documents the process followed during the development of the UI in line with the provided mockups and assets. To reiterate on the stipulations enforced: 
 
 * Cannot use a UI framework
 * UI should be functional on mobile devices
@@ -13,12 +13,12 @@ The challenge as provided was to realise the UI presented via the mockups in acc
 
 ### Technologies
 
-To complete this challenege I have opted to make use of the following technologies:
+To complete this challenege I opted to make use of the following technologies:
 
 * [React](https://reactjs.org) - SPA Framework
 * [Visual Studio Code](https://code.visualstudio.com) - IDE
 
-I have chosen specifically to use React as this is the technology used internally.
+I had chosen specifically to use React as this is the technology used internally.
 
 ## Process
 
@@ -47,7 +47,7 @@ Additionally, fonts were provided. Specifically, variations of the PostGrotesk f
 * PostGrotesk Light
 * PostGrotesk Medium
 
-I segregated assets to the following location which are then imported into the main app.css file:
+I segregated assets to the following location which are then imported into the main App.css file:
 ```
 src/fonts/fonts.css
 ```
@@ -57,20 +57,42 @@ This file defines font sizes, colors, alignments, and general element preset cla
 
 Analysing the mockup further, I noted down the following elements as components:
 
-* Button
-* Card (Right margin affixed element)
-* Geotag (Left margin flag/currency type within sections)
-* Section (Left margin sender and receiver boxes)
-* Splitter (Left margin footer separator)
-* Steps (Left margin transaction steps)
+#### Button
 
-The step-by-step process to creating/implementing each:
+Represents the button contained in the left margin that should bring up a modal window.
+
+#### Card
+
+Represents the sectioned element in the right margin that encompasses numerical data and must be affixed to its current position at all times.
+
+#### Geotag
+
+Represents the country/currency information contained within sections in the left margin.
+
+#### Section
+
+Comprises of the geotag component in addition to correlating numerical data in the card component.
+
+#### Splitter
+
+Represents a section splitter. Used to separate the main left margin content and the footer information.
+
+#### Steps
+
+Represents the topmost element of the left margin illustrating a multi-step process. Focus is placed on the fact that the UI in question relates to the first step explicitly.
+
+The general process to creating/implementing each:
 
 * Import React
 * Import Components (if required)
 * Import Stylesheets (if required)
 * Define & Export Component
 * Implement Render
+
+Each component is encompassed in its own folder, comprising of a JavaScript and CSS file, respectively:
+```
+src/components
+```
 
 ### 4. Site Layout/Design
 
@@ -170,4 +192,14 @@ src/App.css
   }
 }
 ```
-The resulting changes were tested both via [IP Address]:3000 on a mobile device and with the browsers responsive desing mode, respectively.
+The resulting changes were tested as follows:
+
+* Using the browsers responsive design mode
+* On a mobile device via IP address on port 3000 (i.e. [IP]:3000)
+* On both desktop and mobile via site hosting on [GitHub Pages](https://naxes.github.io/CurrencyFair-Challenge/)
+
+### 7. Instantiating Information to Components
+
+Initially, I had hard-coded each numerical value contained within both the section and card components. However, I thought more on the integration with the back end and chose to instead 'fake' or 'simulate' it's presumed communication with an API to at least provide the basis for easier integration by using props, state, and ajax fetch.
+
+To do this I created a dummy JSON file with one entry that represents the numerical values presented in the UI.

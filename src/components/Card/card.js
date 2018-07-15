@@ -6,11 +6,22 @@ import question from '../.././img/question-mark-icon.png';
 
 // Define & Export Component
 export default class Card extends Component {
-
+    
     // Implement Render
-    render () {
+    render () {        
+        
+        // Props for Card Component
+        const rate = this.props.details.rate;        
+        const savings = this.props.details.savings;
+        const fee = this.props.details.fee.toFixed(2);
+        const deliveryDate = this.props.details.deliveryDate;
+        const [sendInteger, sendFractional] = this.props.details.sendPrice.toFixed(2).split(".");
+        const [recipientInteger, recipientFractional] = this.props.details.recipientPrice.toFixed(2).split(".");
+
         return (
             <div className="card font-m">
+
+                {/* Sending Details */}
                 <div className="card-header">
                     <div className="card-body">
                         <p className="black">Sending Details</p>
@@ -22,10 +33,12 @@ export default class Card extends Component {
                             <p className="grey">You send</p>
                         </div>
                         <div className="col-s">
-                            <p className="black align-right">€2000.00</p>
+                            <p className="black align-right">€{sendInteger +"."+  sendFractional}</p>
                         </div>
                     </div>
                 </div>
+
+                {/* Receiving Details */}
                 <div className="card-header">
                     <div className="grid card-body">
                         <div className="col-s">
@@ -44,7 +57,7 @@ export default class Card extends Component {
                             <p>Rate</p>
                         </div>
                         <div className="col-s align-right">
-                            <p>0.86022</p>
+                            <p>{rate}</p>
                         </div>
                     </div>
                     <div className="grid card-body grey">
@@ -52,7 +65,7 @@ export default class Card extends Component {
                             <p>Fee</p>
                         </div>
                         <div className="col-s align-right">
-                            <p>£2.50</p>
+                            <p>£{fee}</p>
                         </div>
                     </div>
                     <div className="grid card-body grey">
@@ -60,7 +73,7 @@ export default class Card extends Component {
                             <p>Delivery date</p>
                         </div>
                         <div className="col-s align-right">
-                            <p>25th November</p>
+                            <p>{deliveryDate}</p>
                         </div>
                     </div>
                     <div className="grid card-body">
@@ -68,12 +81,14 @@ export default class Card extends Component {
                             <p>Recipient gets</p>
                         </div>
                         <div className="col-s align-right black">
-                            <p>£1717.94</p>
+                            <p>£{recipientInteger + "." + recipientFractional}</p>
                         </div>
                     </div>
                 </div>
+
+                {/* Savings */}
                 <div className="card-section orange">
-                    <p className="card-body align-center">You save £66.19 compared your bank!</p>
+                    <p className="card-body align-center">You save £{ savings } compared your bank!</p>
                 </div>
             </div>
         );
