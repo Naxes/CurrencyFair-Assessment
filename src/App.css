@@ -71,6 +71,7 @@ BUTTONS
 /* Default Button */
 .default {
   border: none;
+  background-color: #adadad;
 }
 
 /* Primary Button */

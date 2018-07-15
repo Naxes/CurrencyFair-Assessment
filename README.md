@@ -69,6 +69,16 @@ src/fonts/fonts.css
 ```
 This file defines font sizes, colors, alignments, and general element preset classes.
 
+#### Other Assets
+
+The mockup is also inclusive of other assets. For the purposes of the challenege I acquired the following:
+
+* [European Flag](https://www.flaticon.com/free-icon/european-union_197615#term=europe&page=1&position=2)
+* [United Kingdom Flag](https://www.flaticon.com/free-icon/united-kingdom_197374#term=uk&page=1&position=1)
+* [Circular Question Mark Icon](https://www.flaticon.com/free-icon/question-mark-in-dark-circle_71768#term=question%20circle&page=1&position=18)
+* [Refresh Icon](https://www.flaticon.com/free-icon/refresh-button_61225#term=refresh&page=1&position=29)
+* [Phone Icon](https://www.flaticon.com/free-icon/phone-receiver_9243#term=phone&page=1&position=7)
+
 ### 3. Defining Components
 
 Analysing the mockup further, I noted down the following elements as components:
@@ -224,3 +234,6 @@ In addition however, the numerical data contained in the section components in t
 // Example of split()
 const [sendInteger, sendFractional] = this.props.details.sendPrice.toFixed(2).split(".");
 ```
+### 6. Modal Component
+
+Being very use to utilizing the modals of other UI frameworks, this provided an interesting challenge to build one from scratch in React using a togglable state and CSS keyframe animation to provide the fade-in effect. 

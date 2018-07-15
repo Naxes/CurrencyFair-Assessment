@@ -51,11 +51,10 @@ COLOR PALETTE
 #adadad - Grey
 #31313b - Black
 #ffd079 - Orange
-
 #e0e0e0 - Light Grey
 #6dc0e6 - Light Blue
-
 #5ba0bf - Dark Blue
+#8899a5 - Dark Grey
 ***/
 
 /* Grey */
@@ -83,6 +82,16 @@ COLOR PALETTE
     color: #6dc0e6;
 }
 
+/* Dark Blue */
+.dark-blue {
+    color: #5ba0bf;
+}
+
+/* Dark Grey */
+.dark-grey {
+    color: #8899a5;
+}
+
 /***
 ALIGNMENTS
 ***/
@@ -97,6 +106,20 @@ ALIGNMENTS
 
 .align-center {
     text-align: center;
+}
+
+/***
+WEIGHTS
+***/
+
+/* Bold */
+.bold {
+    font-family: PostGrotesk-Bold;
+}
+
+/* Light */
+.light {
+    font-family: PostGrotesk-Light;
 }
 
 /***

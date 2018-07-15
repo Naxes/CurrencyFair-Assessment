@@ -92,7 +92,7 @@ export default class App extends Component {
             <div className="grid">
               <div className="col-xs"></div>
               <div className="col-m">
-                <button onClick={this.showModal} className="button-m primary"><span className="font-m">Next</span></button>
+                <button onClick={this.showModal.bind(this)} className="button-m primary"><span className="font-m">Next</span></button>
               </div>
             </div>
 
