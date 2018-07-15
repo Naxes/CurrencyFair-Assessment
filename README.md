@@ -76,23 +76,18 @@ Analysing the mockup further, I noted down the following elements as components:
 Represents the button contained in the left margin that should bring up a modal window.
 
 #### Card
-
 Represents the sectioned element in the right margin that encompasses numerical data and must be affixed to its current position at all times.
 
 #### Geotag
-
 Represents the country/currency information contained within sections in the left margin.
 
 #### Section
-
 Comprises of the geotag component in addition to correlating numerical data in the card component.
 
 #### Splitter
-
 Represents a section splitter. Used to separate the main left margin content and the footer information.
 
 #### Steps
-
 Represents the topmost element of the left margin illustrating a multi-step process. Focus is placed on the fact that the UI in question relates to the first step explicitly.
 
 The general process to creating/implementing each:
