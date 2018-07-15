@@ -8,6 +8,7 @@ The following documents the process followed during the development of the UI in
 * Code should be commented and easy to maintain/iterate on
 
 ## Table of Contents
+
 [Overview](#overview)
 
 ## Overview
