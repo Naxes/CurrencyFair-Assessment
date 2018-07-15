@@ -12,9 +12,9 @@ The following documents the process followed during the development of the UI in
 * [Overview](#overview)
 * [Process](#process)
   * [1. Create React App](#1-create-react-app)
-  * [2. Color Palette & Assets](#2-color-palette-&-assets)
+  * [2. Color Palette & Assets](#2-color-palette--assets)
   * [3. Defining Components](#3-defining-components)
-  * [4. Layout/Design](#4-layout/design)
+  * [4. Layout/Design](#4-layoutdesign)
   * [5. Instantiating Information to Components](#5-instantiating-information-to-components)
 
 ## Overview
@@ -173,7 +173,7 @@ src/App.css
 }
 ```
 
-##### Affixing the Card Component
+#### Affixing the Card Component
 
 One feature of the UI was that the right sections card encompassing a number of numerical details must remain affixed to it's position at all times, meaning if there is vertical scrollable space in the viewport, that this will remain in place. This was achieved by applying the following to the card class:
 ```
@@ -187,7 +187,7 @@ src/components/Card/card.css
 ```
 The top value ensures that there is a margin gap between the card and the top of the viewport when it becomes affixed and matches the height of the navbar. In essence, scrolling the navbar just out of view will trigger the affixed state of the card component.
 
-#### Mobile & Media Queries
+#### Mobile & Media Queries
 
 Due to the nature of the grid system made with flexboxes, displaying elements encapsulated within it at all times with a CSS property of 'display: flex' meant that items would not stack given access on a mobile device. Thusly, media queries were utilised to alter the grid and other elements to display in appropriate ways. 
 
