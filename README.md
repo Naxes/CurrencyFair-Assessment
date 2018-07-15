@@ -7,9 +7,17 @@ The following documents the process followed during the development of the UI in
 * Should use an SPA framework (e.g. AngularJS, VueJS, React)
 * Code should be commented and easy to maintain/iterate on
 
+## Table of Contents
+[Overview](#overview)
+
 ## Overview
 
 The challenge as provided was to realise the UI presented via the mockups in accordance with the stipulations as aforementioned in which, hypothetically, they may then be passed to a back end developer to integrate.
+
+### URL
+
+The project is hosted via GitHub Pages. To access the UI, navigate to the following:
+**URL:** https://naxes.github.io/CurrencyFair-Challenge/
 
 ### Technologies
 
@@ -102,10 +110,10 @@ One of the more challenging aspects was certainly to not rely on any UI framewor
 
 Created a set of classes in CSS using flexboxes for the purposes of site layout conjunctively with media queries for elements that should stack and or be presented differently on mobile devices: 
 
-* .grid (Container similar to a row)
-* .col-xs (Extra small column)
-* .col-s (Small column)
-* .col-m (Medium column)
+* .grid (container similar to a row)
+* .col-xs (extra small column)
+* .col-s (small column)
+* .col-m (medium column)
 
 The sizes of each column are governed by a differing flex value: 
 ```
@@ -200,13 +208,13 @@ The resulting changes were tested as follows:
 
 ### 7. Instantiating Information to Components
 
-Initially, I had hard-coded each numerical value contained within both the section and card components. However, I thought more on the integration with the back end and chose to instead 'fake' or 'simulate' it's presumed communication with an API to at least provide the basis for easier integration by using props, state, and ajax fetch.
+Initially, I had hard-coded each numerical value contained within both the section and card components. However, I thought more on the integration with the back end and chose to instead 'fake' or 'simulate' its presumed communication with an API to at least provide the basis for easier integration by using props, state, and ajax fetch.
 
 To do this I created a dummy JSON file (details.json) with one entry that represents the numerical values presented in the UI. This is then fetched via AJAX where the URL equates to the raw JSON data located within the repo itself.
 
-Notably, for values such as €2000.00 where the fractional values are zero, these would not display when retrieving the data. The workaround was to make use of the toFixed() method:
+Notably, for instances where any decimal values were zero, these would not display when retrieving the data. The workaround was to make use of the toFixed() method and explicitly specify to what decimal places to display:
 ```
-// Example of toFixed
+// Example of toFixed()
 const sendPrice = this.props.details.sendPrice.toFixed(2)
 ```
 In addition however, the numerical data contained in the section components in the left margin have styling that segregates the integer and fractional values whereby the latter should appear smaller. This meant I needed to make use of split() to accommodate this:
