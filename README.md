@@ -202,4 +202,15 @@ The resulting changes were tested as follows:
 
 Initially, I had hard-coded each numerical value contained within both the section and card components. However, I thought more on the integration with the back end and chose to instead 'fake' or 'simulate' it's presumed communication with an API to at least provide the basis for easier integration by using props, state, and ajax fetch.
 
-To do this I created a dummy JSON file with one entry that represents the numerical values presented in the UI.
+To do this I created a dummy JSON file (details.json) with one entry that represents the numerical values presented in the UI. This is then fetched via AJAX where the URL equates to the raw JSON data located within the repo itself.
+
+Notably, for values such as €2000.00 where the fractional values are zero, these would not display when retrieving the data. The workaround was to make use of the toFixed() method:
+```
+// Example of toFixed
+const sendPrice = this.props.details.sendPrice.toFixed(2)
+```
+In addition however, the numerical data contained in the section components in the left margin have styling that segregates the integer and fractional values whereby the latter should appear smaller. This meant I needed to make use of split() to accommodate this:
+```
+// Example of split()
+const [sendInteger, sendFractional] = this.props.details.sendPrice.toFixed(2).split(".");
+```

@@ -32,7 +32,16 @@ export default class App extends Component {
 
   // Fetch JSON
   componentDidMount() {
-    
+    const url = "https://raw.githubusercontent.com/Naxes/CurrencyFair-Challenge/master/details.json";
+
+    // AJAX
+    fetch(url)
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          details: data
+        });
+      })
   }
 
   // Implement Render
@@ -121,7 +130,7 @@ export default class App extends Component {
           <div className="right-section">
             <div className="spacer-m"></div>
             {this.state.details.map((details) => {
-              <Card details={details} />
+              return <Card details={details} />
             })}
           </div>
         </div>
