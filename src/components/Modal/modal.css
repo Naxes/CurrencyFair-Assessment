@@ -3,7 +3,7 @@
     width: 100vw;
     height: 108vh;
     top: 0;
-    position: absolute;    
+    position: fixed;    
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -30,4 +30,12 @@
 .fadeIn {
     opacity: 1;
     transition: opacity .5s;
+}
+
+@media (max-width: 700px) {
+    .modal {
+        left: 5vw;
+        width: 90vw;
+        height: 50vh;                        
+    }
 }
