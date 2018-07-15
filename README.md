@@ -24,6 +24,7 @@ The challenge as provided was to realise the UI presented via the mockups in acc
 ### URL
 
 The project is hosted via GitHub Pages. To access the UI, navigate to the following:
+
 **URL:** https://naxes.github.io/CurrencyFair-Challenge/
 
 ### Technologies
