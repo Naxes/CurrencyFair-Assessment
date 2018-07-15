@@ -73,14 +73,14 @@ This file defines font sizes, colors, alignments, and general element preset cla
 
 Analysing the mockup further, I noted down the following elements as components:
 
-#### Button
-Represents the button contained in the left margin that should bring up a modal window.
-
 #### Card
 Represents the sectioned element in the right margin that encompasses numerical data and must be affixed to its current position at all times.
 
 #### Geotag
 Represents the country/currency information contained within sections in the left margin.
+
+#### Modal
+Represents the popup overlay window triggered on click of the next button. 
 
 #### Section
 Comprises of the geotag component in addition to correlating numerical data in the card component.

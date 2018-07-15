@@ -2,18 +2,18 @@
 import React, { Component } from 'react';
 
 // Import Components
-import Button from './components/Button/button';
 import Card from './components/Card/card';
+import Modal from './components/Modal/modal';
 import Navbar from './components/Navbar/navbar';
 import Section from './components/Section/section';
 import Splitter from './components/Splitter/splitter';
 import Steps from './components/Steps/steps';
 
 // Import Stylesheets
-import './fonts/font.css';
 import './App.css';
-import './components/Button/button.css';
+import './fonts/font.css';
 import './components/Card/card.css';
+import './components/Modal/modal.css';
 import './components/Navbar/navbar.css';
 import './components/Section/section.css';
 import './components/Splitter/splitter.css';
@@ -21,8 +21,6 @@ import './components/Steps/steps.css';
 
 // Define & Export Component
 export default class App extends Component {
-
-  // State
   constructor(props) {
     super(props);
     this.state = {
@@ -42,6 +40,14 @@ export default class App extends Component {
           details: data
         });
       })
+  }
+
+  // Show Modal
+  showModal = () => {    
+    this.setState({
+      ...this.state,
+      show: !this.state.show
+    })
   }
 
   // Implement Render
@@ -81,12 +87,12 @@ export default class App extends Component {
               </div>
             </div>
 
-            {/* Button Component */}
+            {/* Next Button */}
             <div className="spacer-m"></div>
             <div className="grid">
               <div className="col-xs"></div>
               <div className="col-m">
-                <Button name="Next" />
+                <button onClick={this.showModal} className="button-m primary"><span className="font-m">Next</span></button>
               </div>
             </div>
 
@@ -133,6 +139,9 @@ export default class App extends Component {
               return <Card details={details} />
             })}
           </div>
+
+          {/* Modal */}
+          <Modal show={this.state.show} onClose={this.showModal} />          
         </div>
       </div>
     );

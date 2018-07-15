@@ -1,7 +1,10 @@
 /***
 GRID SYSTEM
 ***/
-
+.container {
+  width: 100%;
+  height: 100%;
+}
 /* Flexbox Grid */
 .grid {
   display: flex;   
@@ -39,6 +42,56 @@ SPACERS
 /* Horizontal Spacer (Large) */
 .spacer-l {
   margin-top: 80px;
+}
+
+/***
+BUTTONS
+***/
+
+/* Button */
+.button-s, .button-m {  
+  display: block;  
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;   
+}
+
+/* Small Button */
+.button-s {
+  width: auto;
+  height: 40px;
+}
+
+/* Medium Button */
+.button-m {
+  width: auto;
+  height: 50px;
+}
+
+/* Default Button */
+.default {
+  border: none;
+}
+
+/* Primary Button */
+.primary {
+  border: 1px solid #5ba0bf;
+  background-color: #6dc0e6;
+}
+
+/* Button Text Padding */
+.button-s>span, .button-m>span {   
+  padding: 10px 10px 10px 10px;
+}
+
+/* Primary Button Hover Color */
+.button-s.primary:hover, .button-m.primary:hover {
+  background-color: #5ba0bf;
+}
+
+/* Default Button Hover Color */
+.button-s.default:hover, .button-m.default:hover {
+  background-color: grey;
 }
 
 /***
