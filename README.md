@@ -7,7 +7,7 @@ The following documents the process followed during the development of the UI in
 * Should use an SPA framework (e.g. AngularJS, VueJS, React)
 * Code should be commented and easy to maintain/iterate on
 
-## Table of Contents
+## Table of Contents
 
 [Overview](#overview)
 
