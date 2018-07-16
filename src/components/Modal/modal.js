@@ -22,7 +22,7 @@ export default class Modal extends Component {
 
         // Props for Modal Component
         const classes = this.props.show ? 'fadeIn':'';
-        const areaCode = this.props.details.areaCode;        
+        // const areaCode = this.props.details.areaCode;        
         const phoneNumber = this.props.details.phoneNumber;
         
         if (!this.props.show) {
@@ -39,7 +39,7 @@ export default class Modal extends Component {
                     <div className="modal-body">
                         <div className="grid">
                             <div className="col-m">
-                                <p className="font-m black">Enter the code sent via SMS to <span className="area-code grey">+{areaCode}</span><span className="number grey">{phoneNumber}</span></p>
+                                <p className="font-m black">Enter the code sent via SMS to <span className="area-code grey">+</span><span className="number grey">{phoneNumber}</span></p>
                             </div>
                         </div>
 
