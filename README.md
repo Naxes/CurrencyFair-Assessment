@@ -56,6 +56,7 @@ Took the mockup PDF file provided into Photoshop in order to extract the color h
 * #e0e0e0 - Light Grey
 * #6dc0e6 - Light Blue
 * #5ba0bf - Dark Blue
+* #8899a5 - Dark Grey
 
 Additionally, fonts were provided. Specifically, variations of the PostGrotesk font in many formats. Notably, I opted to use WOFF (Web Open Font Format) due to it's better browser compatability when viewed comparatively to the others. In relation to the variations of the font, italicized versions were provided but are not used in the mockup, thusly those are excluded. In essence, those utilised are:
 
