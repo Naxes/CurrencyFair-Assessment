@@ -22,7 +22,7 @@ The following documents the process followed during the development of the UI in
 
 The challenge as provided was to realise the UI presented via the mockups in accordance with the stipulations as aforementioned in which, hypothetically, they may then be passed to a back end developer to integrate.
 
-### URL
+### Accessing the UI
 
 The project is hosted via GitHub Pages. To access the UI, navigate to the following:
 
