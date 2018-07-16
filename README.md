@@ -76,6 +76,7 @@ The mockup is also inclusive of other assets. For the purposes of the challenege
 * [European Flag](https://www.flaticon.com/free-icon/european-union_197615#term=europe&page=1&position=2)
 * [United Kingdom Flag](https://www.flaticon.com/free-icon/united-kingdom_197374#term=uk&page=1&position=1)
 * [Circular Question Mark Icon](https://www.flaticon.com/free-icon/question-mark-in-dark-circle_71768#term=question%20circle&page=1&position=18)
+* [Padlock Icon](https://www.flaticon.com/free-icon/locked-padlock_61457#term=padlock&page=1&position=10)
 * [Refresh Icon](https://www.flaticon.com/free-icon/refresh-button_61225#term=refresh&page=1&position=29)
 * [Phone Icon](https://www.flaticon.com/free-icon/phone-receiver_9243#term=phone&page=1&position=7)
 

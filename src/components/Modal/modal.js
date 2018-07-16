@@ -13,22 +13,24 @@ import phone from '../.././img/phone.png';
 export default class Modal extends Component {
     
     // Close Modal 
-    onClose = (e) => {
-        if (e.target === e.currentTarget) {
-            this.props.onClose && this.props.onClose(e);
-        }
+    onClose = (e) => {        
+        this.props.onClose && this.props.onClose(e);        
     }
 
     // Implement Render
     render() {
-        const classes = this.props.show ? 'fadeIn':'fadeOut';
+
+        // Props for Modal Component
+        const classes = this.props.show ? 'fadeIn':'';
+        const areaCode = this.props.details.areaCode;        
+        const phoneNumber = this.props.details.phoneNumber;
         
         if (!this.props.show) {
             return null;
         }
 
         return (
-            <div className={`overlay ${ classes}`} onClick={(e) => { this.onClose(e) }}>
+            <div className={`overlay ${ classes}`}>
                 <div className="modal">
                     <div className="modal-header">
                         <h4 className="dark-grey"><img src={padlock} alt="padlock icon" width="16"/> Identity verification required</h4>
@@ -37,7 +39,7 @@ export default class Modal extends Component {
                     <div className="modal-body">
                         <div className="grid">
                             <div className="col-m">
-                                <p className="font-m black">Enter the code sent via SMS to</p>
+                                <p className="font-m black">Enter the code sent via SMS to <span className="area-code grey">+{areaCode}</span><span className="number grey">{phoneNumber}</span></p>
                             </div>
                         </div>
 
@@ -66,16 +68,29 @@ export default class Modal extends Component {
 
                                 <div className="grid font-s">
                                     <div className="col-m">
-                                        <p className="grey"><a href="/"><img src={refresh} alt="refresh icon" width="16" /></a> Receive a new code</p>
+                                        <p className="grey"><a href="/"><img src={refresh} alt="refresh icon" width="12" /></a> Receive a new code</p>
                                     </div>
                                     <div className="col-m">
-                                        <p className="grey"><a href="/"><img src={phone} alt="phone icon" width="16" /></a> Receive code via call instead</p>
+                                        <p className="grey"><a href="/"><img src={phone} alt="phone icon" width="12" /></a> Receive code via call instead</p>
                                     </div>
                                 </div>
                             </form>
                         </div>
+                    </div>
+
+                    <div className="modal-footer">
+                        <div className="grid">
+                            <div className="col-xs">
+                            <button className="button-s primary disabled"><span className="font-s">Verify Identity</span></button>
+                            </div>
+                            <div className="col-s">
+                                <button className="button-s default" onClick={(e) => { this.onClose(e) }}><span className="font-s">Back</span></button>
+                            </div>
+                            <div className="col-m font-s align-right">
+                                <a href="/">I can't access this mobile device</a>
+                            </div>
+                        </div>
                     </div>                    
-                    {/* <button className="button-s default" onClick={(e) => { this.onClose(e) }}>Back</button> */}                    
                 </div>
             </div>            
         );

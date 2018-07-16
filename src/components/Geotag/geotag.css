@@ -30,10 +30,11 @@ MOBILE
 
 @media(max-width: 700px) {
     .geotag {
-        margin: 10px 0 0 50px;
+        width: 40%;
+        margin: 10px 0 0 50px;               
     }
 
-    .geotag-currency {
-        display: none;
-    }
+    .geotag>.grid {
+        display: flex;
+    }   
 }

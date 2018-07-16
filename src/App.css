@@ -50,9 +50,10 @@ BUTTONS
 
 /* Button */
 .button-s, .button-m {  
-  display: block;  
+  display: block;   
   color: #ffffff;
   cursor: pointer;
+  white-space: nowrap;
   border-radius: 5px;   
 }
 
@@ -71,13 +72,20 @@ BUTTONS
 /* Default Button */
 .default {
   border: none;
-  background-color: #adadad;
+  color: #8899a5;
+  border: 1px solid #e0e0e0;
+  background-color: #fbfbfb;
 }
 
 /* Primary Button */
 .primary {
   border: 1px solid #5ba0bf;
   background-color: #6dc0e6;
+}
+
+.disabled {
+  opacity: .5;
+  pointer-events: none;
 }
 
 /* Button Text Padding */
@@ -92,7 +100,7 @@ BUTTONS
 
 /* Default Button Hover Color */
 .button-s.default:hover, .button-m.default:hover {
-  background-color: grey;
+  background-color: #e0e0e0;
 }
 
 /***
