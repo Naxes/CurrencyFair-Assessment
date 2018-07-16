@@ -141,7 +141,9 @@ export default class App extends Component {
           </div>
 
           {/* Modal */}
-          <Modal show={this.state.show} onClose={this.showModal} />          
+          {this.state.details.map((details) => {
+            return <Modal details={details} show={this.state.show} onClose={this.showModal} />          
+          })}
         </div>
       </div>
     );
