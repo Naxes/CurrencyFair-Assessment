@@ -43,7 +43,7 @@ export default class App extends Component {
   }
 
   // Show Modal
-  showModal = () => {    
+  showModal = () => {  
     this.setState({
       ...this.state,
       show: !this.state.show
@@ -140,7 +140,7 @@ export default class App extends Component {
             })}
           </div>
 
-          {/* Modal */}
+          {/* Modal Component */}
           {this.state.details.map((details) => {
             return <Modal details={details} show={this.state.show} onClose={this.showModal} />          
           })}

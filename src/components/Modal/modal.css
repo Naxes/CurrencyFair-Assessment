@@ -38,6 +38,7 @@ MODAL COMPONENT
     border-bottom: 1px solid #e0e0e0;    
 }
 
+/* Modal Area Code/Number */
 .area-code, .number {
     padding: 5px;    
 }
@@ -61,6 +62,7 @@ MODAL COMPONENT
     padding: 30px;
 }
 
+/* Modal Footer Link */
 .modal-footer>.grid>.col-m.font-s>a {
     display: block;
     padding-top: 12px;

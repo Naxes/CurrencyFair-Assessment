@@ -16,6 +16,7 @@ The following documents the process followed during the development of the UI in
   * [3. Defining Components](#3-defining-components)
   * [4. Layout/Design](#4-layoutdesign)
   * [5. Instantiating Information to Components](#5-instantiating-information-to-components)
+  * [6. Modal Component](#6-modal-component)
 
 ## Overview
 
@@ -237,4 +238,54 @@ const [sendInteger, sendFractional] = this.props.details.sendPrice.toFixed(2).sp
 ```
 ### 6. Modal Component
 
-Being very use to utilizing the modals of other UI frameworks, this provided an interesting challenge to build one from scratch in React using a togglable state and CSS keyframe animation to provide the fade-in effect. 
+Being very use to utilizing the modals of other UI frameworks, this provided an interesting challenge to build one from scratch in React using a togglable state and CSS keyframe animation to provide the fade-in effect. The modal also encompasses an area code and phone number also pulled from the 'details.json' file on the project repo, similarly to those as previously discussed.
+
+#### Toggling the Modal
+
+The modal is toggled via a 'showModal()' method which alternates the state 'show' between true or false on click of the next button:
+```
+src/App.js
+
+// Show Modal
+  showModal = () => {  
+    this.setState({
+      ...this.state,
+      show: !this.state.show
+    })
+  }
+```
+This state is then passed to the modal component as a prop:
+```
+src/App.js
+
+// Modal Component
+<Modal details={details} show={this.state.show} />
+```
+This is used to check the current state in addition to applying a CSS class to facilitate the fade-in effect:
+```
+src/components/Modal/modal.js
+
+// Fade Effect
+const classes = this.props.show ? 'fadeIn':'';
+
+return (
+  <div className={`overlay ${ classes }`}>
+);
+```
+
+#### Fade Effect
+
+When clicking the next button, it is stipulated that the modal should fade-in. To accomplish this, I used the aforementioned ternary statement that toggles the following CSS class to be applied to the modal:
+```
+src/components/Modal/modal.css
+
+/* Modal Transition */
+.fadeIn {
+    animation: fadeIn .5s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+```

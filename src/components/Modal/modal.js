@@ -32,10 +32,14 @@ export default class Modal extends Component {
         return (
             <div className={`overlay ${ classes}`}>
                 <div className="modal">
+
+                    {/* Modal Header */}
                     <div className="modal-header">
                         <h4 className="dark-grey"><img src={padlock} alt="padlock icon" width="16"/> Identity verification required</h4>
                         <p className="font-s grey">For your security, we ocassionally require you to verify your identity by entering a code sent to your mobile device.</p>
-                    </div>                                       
+                    </div>         
+
+                    {/* Modal Body */}
                     <div className="modal-body">
                         <div className="grid">
                             <div className="col-m">
@@ -78,6 +82,7 @@ export default class Modal extends Component {
                         </div>
                     </div>
 
+                    {/* Modal Footer */}
                     <div className="modal-footer">
                         <div className="grid">
                             <div className="col-xs">
