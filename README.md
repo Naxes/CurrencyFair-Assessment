@@ -71,7 +71,7 @@ src/fonts/fonts.css
 ```
 This file defines font sizes, colors, alignments, and general element preset classes.
 
-#### Other Assets
+#### Other Assets
 
 The mockup is also inclusive of other assets. For the purposes of the challenege I acquired the following:
 
